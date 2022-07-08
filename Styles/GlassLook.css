@@ -1,0 +1,184 @@
+/* Basic Body And Overall Desining */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(48deg, #001aff, #006eff 50%, #ff0101 50%, #ac0101);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(340deg, #55bae9, #03bcf4 50%, transparent 50%, transparent);
+}
+
+
+/* Desining For Analog Clock */
+
+#maindiv {
+    height: 90vh;
+    width: 50vw;
+    /* border: 1px solid black; */
+    outline: none;
+    align-items: center;
+    position: relative;
+    align-content: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background: linear-gradient( 48deg, #001aff, #006eff 50%, #ff0101 50%, #ac0101);
+    box-shadow: 20px 20px 30px -12px #1a1a1a, -20px -20px 31px -8px #e0ebff;
+}
+
+#maindiv::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, #55bae9, #03bcf4 50%, transparent 50%, transparent);
+}
+
+#analog {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border: 1px solid rgb(0, 0, 0);
+    transform: translate(-50%, -50%);
+    top: 39%;
+    left: 50%;
+    backdrop-filter: blur(50px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#Clock1 {
+    position: absolute;
+    height: 38vw;
+    width: 38vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: url(image/trnspimg.png);
+    /* background: url(image/clock3.png); */
+    background-size: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Element {
+    /* border: 3px solid red;*/
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#Clock_2::before {
+    content: '';
+    height: 3%;
+    width: 3%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 50%;
+}
+
+#Hour {
+    width: 50%;
+    height: 50%;
+}
+
+#Minutes {
+    width: 70%;
+    height: 70%;
+}
+
+#Seconds {
+    width: 90%;
+    height: 90%;
+}
+
+#Hour::before {
+    position: relative;
+    content: '';
+    width: 2.7%;
+    height: 50%;
+    border-radius: 10%;
+    background-color: black;
+    z-index: 2;
+}
+
+#Minutes::before {
+    position: absolute;
+    content: '';
+    width: 2%;
+    height: 50%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 3;
+    /*  background-color: rgb(79, 79, 245);*/
+}
+
+#Seconds::before {
+    position: absolute;
+    content: '';
+    width: 0.7%;
+    height: 65%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 4;
+    /*  background-color: rgb(86, 190, 86);*/
+}
+
+
+/* Desining For Digital Clock */
+
+#degital {
+    position: absolute;
+    /* border: 1px solid black; */
+    width: 40vw;
+    height: 10vw;
+    transform: translate(-50%, -50%);
+    top: 87%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2vw;
+}
+
+#clock2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 34vw;
+    height: 10vw;
+    line-height: normal;
+    font-size: 3vw;
+    font-weight: bold;
+    border: 2px solid #0c557a;
+    color: white;
+    backdrop-filter: blur(10px);
+    /* padding: 1%;
+    position: absolute;
+    display: flex;
+    /* background-size: cover; */
+    /* box-shadow: inset 13px 13px 20px #cbced1, inset -13px -13px 20px #ffffff; */
+}

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+background: #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+
+#maindiv {
+    position: relative;
+    top: 5vw;
+    height: 50vw;
+    width: 40vw;
+    border-radius: 5%;
+    box-shadow: 13px 13px 20px #717171, -13px -13px 20px #d0d0d0;
+}
+
+#analog {
+    position: absolute;
+    background: #ecf0f3;
+    height: 30vw;
+    width: 30vw;
+    transform: translate(-50%);
+    top: 4%;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: 15px 15px 30px#cbced1, -15px -15px 30px #ffffff;
+}
+
+#Clock1 {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: url(Image/clock3.png);
+    background-size: 100%;
+    border-radius: 50%;
+    box-shadow: /*Logo Shadow*/
+    			0px 0px 10px #000000, 
+		/*Offset*/
+    			0px 9px 13px #9a9a9a, 
+		/*Bottom Right*/
+    			8px 4px 13px #969696, 
+		/*Top Left*/
+			0px 0px 0px #e4e4e4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Element {
+    /* border: 3px solid red;*/
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#Clock_2::before {
+    content: '';
+    height: 3%;
+    width: 3%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 50%;
+}
+
+#Hour {
+    width: 50%;
+    height: 50%;
+}
+
+#Minutes {
+    width: 70%;
+    height: 70%;
+}
+
+#Seconds {
+    width: 90%;
+    height: 90%;
+}
+
+#Hour::before {
+    position: relative;
+    content: '';
+    width: 2.7%;
+    height: 50%;
+    border-radius: 10%;
+    background-color: black;
+    z-index: 2;
+}
+
+#Minutes::before {
+    position: absolute;
+    content: '';
+    width: 2%;
+    height: 50%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 3;
+    /*  background-color: rgb(79, 79, 245);*/
+}
+
+#Seconds::before {
+    position: absolute;
+    content: '';
+    width: 0.7%;
+    height: 65%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 4;
+    /*  background-color: rgb(86, 190, 86);*/
+}
+
+
+/*END CSS___ANALOG CLOCK*/
+
+
+/*START CSS__DIGITAL CLOCK*/
+
+#degital {
+    position: absolute;
+    /*  border: 1px solid red;*/
+    width: 40vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2vw;
+}
+
+#clock2 {
+display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 34vw;
+    height: 10vw;
+    line-height: normal;
+    font-size: 3vw;
+    font-weight: bold;
+    /* border: 2px solid #091921; */
+    color: #2b2b2b;
+    /* padding: 1%;
+    position: absolute;
+    display: flex;
+    /* background-size: cover; */
+    box-shadow: inset 13px 13px 20px #656565, inset -13px -13px 20px #cecece;
+}
+
+
+/*END CSS DEGITAL CLOCK*/

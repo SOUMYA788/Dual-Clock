@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #091921;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#maindiv {
+    display: flex;
+    width: 50vw;
+    height: 57vw;
+    /* border: 2px solid white;*/
+    margin-top: 1%;
+    outline: none;
+    position: relative;
+    box-shadow: 15px 15px 30px #555555, -15px -15px 30px #e7e7eb;
+}
+
+#analog {
+    display: flex;
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    top: 6%;
+    left: 9%;
+    border: 2px solid rgb(57, 7, 238);
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px #555555, -1px -1px 25px #e7e7eb;
+    background: linear-gradient(45deg, rgb(48, 12, 207), rgb(199 237 255), rgb(197 247 255), rgb(236 235 255), rgb(145 193 255));
+}
+
+#Clock1 {
+    background: url(image/clock3.png);
+    /* background: url(image/trnspimg.png); */
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 15px 15px 30px #4e42f6, inset -15px -15px 30px #5751d4;
+    display: flex;
+    top: 12%;
+    left: 12%;
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Clock1::before {
+    content: '';
+    height: 1vw;
+    width: 1vw;
+    background-color: black;
+    border-radius: 50%;
+    border: 1px solid gold;
+}
+
+.Element {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#Clock_2::before {
+    content: '';
+    height: 3%;
+    width: 3%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 50%;
+}
+
+#Hour {
+    width: 50%;
+    height: 50%;
+}
+
+#Minutes {
+    width: 70%;
+    height: 70%;
+}
+
+#Seconds {
+    width: 99%;
+    height: 99%;
+}
+
+#Hour::before {
+    position: relative;
+    content: '';
+    width: 2.7%;
+    height: 50%;
+    border-radius: 10%;
+    background-color: red;
+    z-index: 1;
+}
+
+#Minutes::before {
+    position: absolute;
+    content: '';
+    width: 2%;
+    height: 50%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 2;
+    background-color: rgb(79, 79, 245);
+}
+
+#Seconds::before {
+    position: absolute;
+    content: '';
+    width: 0.7%;
+    height: 65%;
+    background-color: black;
+    border-radius: 10%;
+    z-index: 3;
+    background-color: rgb(86, 190, 86);
+}
+
+#degital {
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    width: 42vw;
+    height: 8vw;
+    border: 2px solid rgb(128, 128, 128);
+    bottom: 7%;
+    margin-left: 7%;
+}
