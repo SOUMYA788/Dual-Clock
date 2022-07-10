@@ -1,9 +1,38 @@
+@font-face {
+    font-family: economia;
+    src: url(/Styles/font/Economica/Economica-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(/Styles/font/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(/Styles/font/Quicksand/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: teko;
+    src: url(/Styles/font/Teko/Teko-Regular.ttf);
+}
+
+@font-face {
+    font-family: zillaSlab;
+    src: url(/Styles/font/Zilla_Slab/ZillaSlab-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-
+html{
+    font-size: calc(1vw+1em);
+}
 body {
+    width: 100vw;
+    height: 100vh;
     background: #ecf0f3;
     display: flex;
     justify-content: center;
@@ -12,35 +41,26 @@ body {
 }
 
 #maindiv {
-    position: relative;
-    top: 5vw;
-    height: 90vh;
-    width: 40vw;
+    height: 582px;
+    width: 40%;
     border-radius: 5%;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#analog {
-    position: absolute;
-    background: #ecf0f3;
-    height: 30vw;
-    width: 30vw;
-    transform: translate(-50%);
-    top: 4%;
-    left: 50%;
-    border-radius: 50%;
-    box-shadow: 15px 15px 30px#cbced1, -15px -15px 30px #ffffff;
+#analog{
+    width: 25vw;
+    height: 25vw;
 }
-
 #Clock1 {
-    height: 30vw;
-    width: 30vw;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background: url(Image/clock3.png);
-    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    background: url(Image/clock3.png) no-repeat;
+    background-size: cover;
     border-radius: 50%;
     box-shadow: /*Logo Shadow*/
     0px 0px 2px #5f5f5f, /*Offset*/
@@ -50,6 +70,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .Element {
@@ -84,7 +105,6 @@ body {
 }
 
 #Hour::before {
-    position: relative;
     content: '';
     width: 2.7%;
     height: 50%;
@@ -94,7 +114,6 @@ body {
 }
 
 #Minutes::before {
-    position: absolute;
     content: '';
     width: 2%;
     height: 50%;
@@ -105,7 +124,6 @@ body {
 }
 
 #Seconds::before {
-    position: absolute;
     content: '';
     width: 0.7%;
     height: 65%;
@@ -122,33 +140,116 @@ body {
 /*START CSS__DIGITAL CLOCK*/
 
 #degital {
-    position: absolute;
-    /*  border: 1px solid red;*/
-    width: 40vw;
-    height: 10vw;
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 2vw;
+    flex-direction: column;
+    align-content: center;
 }
 
 #clock2 {
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 34vw;
-    height: 10vw;
+    width: 100%;
+    height: 100%;
     line-height: normal;
-    font-size: 3vw;
+    font-size: 2.5vw;
+    font-family: quicksand;
     font-weight: bold;
     /* border: 2px solid #091921; */
     color: black;
-    /* padding: 1%;
-    position: absolute;
-    display: flex;
-    /* background-size: cover; */
     box-shadow: inset 13px 13px 20px #cbced1, inset -13px -13px 20px #ffffff;
 }
 
-
 /*END CSS DEGITAL CLOCK*/
+
+
+
+
+@media (max-width:992px) {
+
+    #maindiv {
+        width: 45%;
+    }
+
+    #analog{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    #clock2{
+        font-size: 3vw;
+    }
+}
+
+
+@media (max-width:768px) {
+
+    #maindiv {
+        width: 60%;
+    }
+
+    #analog{
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #clock2{
+        font-size: 3.5vw;
+    }
+}
+
+
+@media (max-width: 576px) {
+    #maindiv {
+        width: 65%;
+    }
+
+    #analog{
+        width: 45vw;
+        height: 45vw;
+    }
+
+    #clock2{
+        font-size: 3vw;
+    }
+}
+
+
+
+
+
+
+/* 
+@media (min-width:1200px) {
+
+    #maindiv {
+        width: 630px;
+    }
+
+    #analog{
+        width: 35vw;
+        height: 35vw;
+    }
+
+    #clock2{
+        font-size: 3vw;
+    }
+} 
+
+@media (min-width:1400px) {
+
+    #maindiv {
+        width: 650px;
+    }
+
+    #analog{
+        width: 35vw;
+        height: 35vw;
+    }
+} */
