@@ -14,7 +14,7 @@ body {
 #maindiv {
     position: relative;
     top: 5vw;
-    height: 50vw;
+    height: 90vh;
     width: 40vw;
     border-radius: 5%;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
